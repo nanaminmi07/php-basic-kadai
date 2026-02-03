@@ -1,27 +1,36 @@
-body>
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PHP基礎編</title>
+</head>
+
+<body>
     <p>
         <?php
-        function sort_2way($array, $order) {
-            $nums = [15, 4, 8, 23, 10];
-            if($order) {
-                echo "昇順にソートしました。<br>";
-                sort($nums, $array);
-                foreach($nums as $num) {
-                    echo $num . '<br>';
+        function sort_2way($array, $order){
+            $nums = [15,4,18,23,10];
+            if($order){
+                echo "昇順にしました<br>";
+                sort($array);
+                foreach($nums as $num){
+                echo $num . '<br>';    
                 }
+                    
             }else {
-                echo "降順にソートしました。<br>";
-                rsort($nums, $array);
-                foreach($nums as $num) {
-                    echo $num . '<br>';
+                echo "降順にしました<br>";
+                rsort($array);
+                foreach($nums as $num){
+                echo $num . '<br>';    
                 }
-
             }
-        }
-        sort_2way($nums, true);
-        sort_2way($nums, false);
-
+            }
+    $array = [15,4,18,23,10];      
+    sort_2way($array,true);
+    sort_2way($array,false);
         ?>
-        </p>
-    </body>
-    </html>
+    </p>
+</body>
+
+</html>
