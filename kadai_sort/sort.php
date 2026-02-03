@@ -1,36 +1,25 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php
+function sort_2way($array, $order){
+    if ($order === 'asc'){
+        echo '昇順にソートします。<br>';
+        sort($array);
+    } elseif ($order === 'desc') {
+        echo '降順にソートします。<br>';
+        rsort($array);
+    }
+    foreach ($array as $val) {
+        echo "$val <br>";
+    }
+}
 
-<head>
-    <meta charset="UTF-8">
-    <title>PHP基礎編</title>
-</head>
+// ソートする配列を宣言
+$nums = [15, 4, 18, 23, 10];
 
-<body>
-    <p>
-        <?php
-        function sort_2way($array,$order){
-            if($order === 'asc'){
-                echo '昇順にソートします。<br>';
-                sort($array);
-            }elseif($order === 'desc'){
-                echo '降順にソートします。<br>';
-                rsort($array);
-            }
-            foreach($array as $val){
-                echo "$val<br>";
-            }
-        }
-        
-        $nums = [15,4,18,23,10];
+// 昇順ソート
+sort_2way($nums, 'asc');
 
-        sort_2way($nums,'asc');
+echo "<br>";
 
-        echo"<br>";
-
-        sort_2way($nums,'desc');
-        ?>
-    </p>
-</body>
-
-</html>
+// 降順ソート
+sort_2way($nums, 'desc');
+?>
