@@ -10,18 +10,18 @@
     <p>
         <?php
         function sort_2way($array, $order){
-            $nums = [15,4,18,23,10];
+            $array = [15,4,18,23,10];
             if($order){
                 echo "昇順にしました<br>";
                 sort($array);
-                foreach($nums as $num){
+                foreach($array as $num){
                 echo $num . '<br>';    
                 }
                     
             }else {
                 echo "降順にしました<br>";
                 rsort($array);
-                foreach($nums as $num){
+                foreach($array as $num){
                 echo $num . '<br>';    
                 }
             }
