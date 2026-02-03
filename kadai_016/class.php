@@ -30,6 +30,10 @@
                 echo $this->name . '<br>';
             }
 
+            public function show_price() {
+                return $this->price;
+            }
+
             public function get_price() {
                 return $this->price;
             }
