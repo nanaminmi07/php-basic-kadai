@@ -25,8 +25,7 @@
                 echo $num . '<br>';    
                 }
             }
-            }
-    $array = [15,4,18,23,10];      
+            }      
     sort_2way($array,true);
     sort_2way($array,false);
         ?>
